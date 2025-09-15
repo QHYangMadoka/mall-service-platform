@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.qhyang.mall</groupId>
+    <artifactId>mall-parent</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+
+    <!-- 关键点：父工程必须是 pom 打包 -->
+    <packaging>pom</packaging>
+    <name>mall-parent</name>
+    <description>Mall multi-module aggregator</description>
+
+    <!-- 先列两个模块，目录稍后创建 -->
+    <modules>
+        <module>mall-product</module>
+        <module>mall-order</module>
+        <module>mall-coupon</module>
+        <module>mall-ware</module>
+        <module>mall-member</module>
+    </modules>
+
+    <!-- 可选：统一依赖版本（后续用 Spring Boot/Spring Cloud 再完善） -->
+    <properties>
+        <java.version>17</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>
